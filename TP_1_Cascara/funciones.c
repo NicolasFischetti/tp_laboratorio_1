@@ -1,37 +1,42 @@
-#define MAX_FLOAT 3.4E+38
-#define MIN_FLOAT 3.4E-38
-#include "float.h"
 
-/** \brief Suma de dos numeros flotantes
- * \param x float Primer numero flotante
- * \param y float Segundo numero flotante
- * \param resultado float* Resultado pasado por referencia
- * \return float si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
+#define INT_MAX 32767
+#define INT_MIN -32767
+
+/** \brief Suma de dos numeros enteros
+ * \param x int Primer numero enteros
+ * \param y int Segundo numero enteros
+ * \param resultado int* Resultado pasado por referencia
+ * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
  */
-float sumar(float x, float y, float *resultado)
+int sumar(int x, int y, int *resultado)
 {
     int retorno = -1;
-    double numeroAuxiliar;
+    long numeroAuxiliar;
     numeroAuxiliar= x+y;
-    if (numeroAuxiliar < FLT_MAX && numeroAuxiliar > FLT_MIN)
+    if (numeroAuxiliar < INT_MAX && numeroAuxiliar > INT_MIN)
     {
         retorno = 0;
         *resultado= numeroAuxiliar;
     }
+    else
+    {
+        retorno = -1;
+    }
+
     return retorno;
 }
-/** \brief Resta de flotantes
- * \param x float El primer numero a restar
- * \param y float El segundo numero a restar
- * \param resultado float* Resultado pasado pasado por referencia
- * \return float si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
+/** \brief Resta de enteros
+ * \param x int El primer numero a restar
+ * \param y int El segundo numero a restar
+ * \param resultado int* Resultado pasado pasado por referencia
+ * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
  */
-float restar(float x, float y, float *resultado)
+int restar(int x, int y, int *resultado)
 {
     int retorno = -1;
     long numeroAuxiliar;
     numeroAuxiliar= x-y;
-    if (numeroAuxiliar < FLT_MAX || numeroAuxiliar > FLT_MIN)
+    if (numeroAuxiliar < INT_MAX && numeroAuxiliar > INT_MIN)
     {
         retorno = 0;
         *resultado= numeroAuxiliar;
@@ -42,13 +47,13 @@ float restar(float x, float y, float *resultado)
     }
     return retorno;
 }
-/** \brief División de flotantes
- * \param x float Primer numero a dividir
- * \param y float Segundo numero a dividir
- * \param resultado float* devuelve el resultado pasado por referencia
- * \return float  si esta todo bien 0, si y es = 0 devuelve -1,
+/** \brief División de enteros
+ * \param x enteros Primer numero a dividir
+ * \param y enteros Segundo numero a dividir
+ * \param resultado enteros* devuelve el resultado pasado por referencia
+ * \return enteros  si esta todo bien 0, si y es = 0 devuelve -1,
  */
-float dividir(float x, float y, float *resultado)
+int dividir(int x, int y, int *resultado)
 {
     int retorno = -1;
     long numeroAuxiliar;
@@ -64,18 +69,18 @@ float dividir(float x, float y, float *resultado)
     }
     return retorno;
 }
-/** \brief Multiplicación de flotantes
- * \param x float Primer numero a multiplicar
- * \param y float Segundo numero a multiplicar
- * \param resultado float* devuelve el resultado pasado por referencia
- * \return float si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
+/** \brief Multiplicación de enteros
+ * \param x int Primer numero a multiplicar
+ * \param y int Segundo numero a multiplicar
+ * \param resultado int* devuelve el resultado pasado por referencia
+ * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
  */
-float multiplicar(float x, float y, float *resultado)
+int multiplicar(int x, int y, int *resultado)
 {
     int retorno= -1;
     long numeroAuxiliar;
     numeroAuxiliar= x*y;
-    if (numeroAuxiliar < FLT_MAX || numeroAuxiliar > FLT_MIN)
+    if (numeroAuxiliar < INT_MAX && numeroAuxiliar > INT_MIN)
     {
         retorno = 0;
         *resultado= numeroAuxiliar;
@@ -84,15 +89,15 @@ float multiplicar(float x, float y, float *resultado)
     return retorno;
 }
 /** \brief Factorizacion de una numero
- * \param x float Numero a factorizar
- * \param resultado float* devuelve el resultado pasado por referencia
- * \return float si todo esta bien 0, si el numero < 0 devuelve -1
+ * \param x int Numero a factorizar
+ * \param resultado int* devuelve el resultado pasado por referencia
+ * \return int si todo esta bien 0, si el numero < 0 devuelve -1
  */
-float factoriar(float x, float* resultado)
+int factoriar(int x, int* resultado)
 {
     int retorno = -1;
     long numeroAuxiliar = 1;
-    if (x < 0 || x > FLT_MAX || x < FLT_MIN)
+    if (x < 0 && x > INT_MAX && x < INT_MIN)
     {
         retorno= -1;
     }

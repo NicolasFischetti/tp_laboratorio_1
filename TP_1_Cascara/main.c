@@ -1,21 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
-#include "float.h"
+#define INT_MAX 32767
+#define INT_MIN -32767
+
+void mostrarSumar(int numeroA, int numeroB, int *resultado);
+void mostrarRestar(int numeroA, int numeroB, int *resultado);
+void mostrarDividir(int numeroA, int numeroB, int *resultado);
+void mostrarMultiplicar(int numeroA, int numeroB, int *resultado);
+void mostrarFactorial(int numeroA,  int *resultado);
 
 int main()
 {
     char seguir='s';
     int opcion=0;
-    float numeroA;
-    float numeroB;
-    float resultado;
+    int numeroA = 0;
+    int numeroB = 0;
+    int resultado;
 
     while(seguir=='s')
     {
 
-        printf("1- Ingresar 1er operando A=%.2f\n", numeroA);
-        printf("2- Ingresar 2do operando B=%.2f\n", numeroB);
+        printf("1- Ingresar 1er operando A: %d\n", numeroA);
+        printf("2- Ingresar 2do operando B: %d\n", numeroB);
         printf("3- Calcular la suma (A+B)\n");
         printf("4- Calcular la resta (A-B)\n");
         printf("5- Calcular la division (A/B)\n");
@@ -30,68 +37,33 @@ int main()
         {
             case 1:
                 printf("Ingrese el numero A\n");
-                scanf("%f", &numeroA);
+                scanf("%d", &numeroA);
                 break;
             case 2:
                 printf("Ingrese el numero B\n");
-                scanf("%f", &numeroB);
+                scanf("%d", &numeroB);
                 break;
             case 3:
-                if (sumar(numeroA, numeroB, &resultado)==0)
-                {
-                    printf("La suma es %.2f\n", resultado );
-                }
-                else
-                {
-                    printf("Error ingrese nuevamente su suma\n");
-                }
+                mostrarSumar( numeroA, numeroB, &resultado);
                 break;
             case 4:
-                if (restar( numeroA,  numeroB, &resultado)==0)
-                {
-                    printf("La resta es %.2f\n", resultado );
-                }
-                else
-                {
-                    printf("Error ingrese nuevamente la resta\n");
-                }
+                mostrarRestar( numeroA, numeroB, &resultado);
                 break;
             case 5:
-                if (dividir( numeroA,  numeroB, &resultado)==0)
-                {
-                    printf("La division es %.2f: \n", resultado);
-                }
-                else
-                {
-                    printf("Error ingrese nuevamente la division\n");
-                }
+                mostrarDividir( numeroA, numeroB, &resultado);
                 break;
             case 6:
-                if (multiplicar( numeroA,  numeroB, &resultado)==0)
-                {
-                    printf("La multiplicacion es: %.2f\n", resultado);
-                }
-                else
-                {
-                    printf("Error ingrese nuevamente la multiplicacion\n");
-                }
+                mostrarMultiplicar( numeroA, numeroB, &resultado);
                 break;
             case 7:
-                if (factoriar(numeroA, &resultado)==0)
-                {
-                    printf("El numero factoriado es %.2f: \n", resultado);
-                }
-                else
-                {
-                    printf("Error ingrese nuevamente el factorial\n");
-                }
+               mostrarFactorial( numeroA, &resultado);
                 break;
             case 8:
-                printf("la suma total es: %.2f\n",sumar );
-                printf("La resta total es: %.2f\n", restar);
-                printf("La división total es: %.2f\n", dividir);
-                printf("La multiplicación total es: %.2f\n",multiplicar);
-                printf("El factorial del numero A es: %.2f\n", factoriar);
+                mostrarSumar( numeroA, numeroB, &resultado);
+                mostrarRestar( numeroA, numeroB, &resultado);
+                mostrarDividir( numeroA, numeroB, &resultado);
+                mostrarMultiplicar( numeroA, numeroB, &resultado);
+                mostrarFactorial( numeroA, &resultado);
                 break;
             case 9:
                 seguir = 'n';
@@ -102,3 +74,63 @@ int main()
     return 0;
 }
 
+void mostrarSumar(int numeroA, int numeroB, int *resultado)
+{
+    if (sumar(numeroA, numeroB, &resultado)==0)
+        {
+            printf("La suma es: %d\n", resultado );
+        }
+    else
+        {
+            printf("Error ingrese nuevamente su suma\n");
+        }
+}
+
+void mostrarRestar(int numeroA, int numeroB, int *resultado)
+{
+    if (restar(numeroA, numeroB, &resultado)==0)
+        {
+            printf("La resta es: %d\n", resultado );
+        }
+    else
+        {
+            printf("Error ingrese nuevamente su resta\n");
+        }
+}
+
+void mostrarDividir(int numeroA, int numeroB, int *resultado)
+{
+    if (dividir(numeroA, numeroB, &resultado)==0)
+        {
+            printf("La division es: %d\n", resultado );
+        }
+    else
+        {
+            printf("Error ingrese nuevamente su division\n");
+        }
+}
+
+void mostrarMultiplicar(int numeroA, int numeroB, int *resultado)
+{
+    if (multiplicar(numeroA, numeroB, &resultado)==0)
+        {
+            printf("La multiplicar es: %d\n", resultado );
+        }
+    else
+        {
+            printf("Error ingrese nuevamente su multiplicacion\n");
+        }
+}
+
+
+void mostrarFactorial(int numeroA,  int *resultado)
+{
+    if (factoriar(numeroA, &resultado)==0)
+        {
+            printf("El factorial es: %d\n", resultado );
+        }
+    else
+        {
+            printf("Error ingrese nuevamente su factorial\n");
+        }
+}

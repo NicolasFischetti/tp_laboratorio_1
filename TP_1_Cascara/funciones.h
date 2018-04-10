@@ -5,9 +5,9 @@
 
 #endif // FUNCIONES_H_INCLUDED
 
-float sumar(float x, float y, float *resultado);
-float restar(float x, float y, float *resultado);
-float dividir(float x, float y, float *resultado);
-float multiplicar(float x, float y, float *resultado);
-float factoriar(float x, float *resultado);
+int sumar(int x, int y, int *resultado);
+int restar(int x, int y, int *resultado);
+int dividir(int x, int y, int *resultado);
+int multiplicar(int x, int y, int *resultado);
+int factoriar(int x, int *resultado);
 
