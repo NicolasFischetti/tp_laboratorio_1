@@ -4,11 +4,11 @@
 #define INT_MAX 32767
 #define INT_MIN -32767
 
-void mostrarSumar(int numeroA, int numeroB, int *resultado);
-void mostrarRestar(int numeroA, int numeroB, int *resultado);
-void mostrarDividir(int numeroA, int numeroB, int *resultado);
-void mostrarMultiplicar(int numeroA, int numeroB, int *resultado);
-void mostrarFactorial(int numeroA,  int *resultado);
+void mostrarSumar(int numeroA, int numeroB, int resultado);
+void mostrarRestar(int numeroA, int numeroB, int resultado);
+void mostrarDividir(int numeroA, int numeroB, int resultado);
+void mostrarMultiplicar(int numeroA, int numeroB, int resultado);
+void mostrarFactorial(int numeroA,  int resultado);
 
 int main()
 {
@@ -44,26 +44,26 @@ int main()
                 scanf("%d", &numeroB);
                 break;
             case 3:
-                mostrarSumar( numeroA, numeroB, &resultado);
+                mostrarSumar( numeroA, numeroB, resultado);
                 break;
             case 4:
-                mostrarRestar( numeroA, numeroB, &resultado);
+                mostrarRestar( numeroA, numeroB, resultado);
                 break;
             case 5:
-                mostrarDividir( numeroA, numeroB, &resultado);
+                mostrarDividir( numeroA, numeroB, resultado);
                 break;
             case 6:
-                mostrarMultiplicar( numeroA, numeroB, &resultado);
+                mostrarMultiplicar( numeroA, numeroB, resultado);
                 break;
             case 7:
-               mostrarFactorial( numeroA, &resultado);
+               mostrarFactorial( numeroA, resultado);
                 break;
             case 8:
-                mostrarSumar( numeroA, numeroB, &resultado);
-                mostrarRestar( numeroA, numeroB, &resultado);
-                mostrarDividir( numeroA, numeroB, &resultado);
-                mostrarMultiplicar( numeroA, numeroB, &resultado);
-                mostrarFactorial( numeroA, &resultado);
+                mostrarSumar( numeroA, numeroB, resultado);
+                mostrarRestar( numeroA, numeroB, resultado);
+                mostrarDividir( numeroA, numeroB, resultado);
+                mostrarMultiplicar( numeroA, numeroB, resultado);
+                mostrarFactorial( numeroA, resultado);
                 break;
             case 9:
                 seguir = 'n';
@@ -74,7 +74,7 @@ int main()
     return 0;
 }
 
-void mostrarSumar(int numeroA, int numeroB, int *resultado)
+void mostrarSumar(int numeroA, int numeroB, int resultado)
 {
     if (sumar(numeroA, numeroB, &resultado)==0)
         {
@@ -86,7 +86,7 @@ void mostrarSumar(int numeroA, int numeroB, int *resultado)
         }
 }
 
-void mostrarRestar(int numeroA, int numeroB, int *resultado)
+void mostrarRestar(int numeroA, int numeroB, int resultado)
 {
     if (restar(numeroA, numeroB, &resultado)==0)
         {
@@ -98,7 +98,7 @@ void mostrarRestar(int numeroA, int numeroB, int *resultado)
         }
 }
 
-void mostrarDividir(int numeroA, int numeroB, int *resultado)
+void mostrarDividir(int numeroA, int numeroB, int resultado)
 {
     if (dividir(numeroA, numeroB, &resultado)==0)
         {
@@ -110,7 +110,7 @@ void mostrarDividir(int numeroA, int numeroB, int *resultado)
         }
 }
 
-void mostrarMultiplicar(int numeroA, int numeroB, int *resultado)
+void mostrarMultiplicar(int numeroA, int numeroB, int resultado)
 {
     if (multiplicar(numeroA, numeroB, &resultado)==0)
         {
@@ -123,7 +123,7 @@ void mostrarMultiplicar(int numeroA, int numeroB, int *resultado)
 }
 
 
-void mostrarFactorial(int numeroA,  int *resultado)
+void mostrarFactorial(int numeroA,  int resultado)
 {
     if (factoriar(numeroA, &resultado)==0)
         {
