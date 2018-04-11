@@ -97,7 +97,7 @@ int factoriar(int x, int* resultado)
 {
     int retorno = -1;
     long numeroAuxiliar = 1;
-    if (x < 0 && x > INT_MAX && x < INT_MIN)
+    if (x < 0 || x > INT_MAX || x < INT_MIN)
     {
         retorno= -1;
     }
