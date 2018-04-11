@@ -6,7 +6,7 @@
 
 void mostrarSumar(int numeroA, int numeroB, int resultado);
 void mostrarRestar(int numeroA, int numeroB, int resultado);
-void mostrarDividir(int numeroA, int numeroB, int resultado);
+void mostrarDividir(int numeroA, int numeroB);
 void mostrarMultiplicar(int numeroA, int numeroB, int resultado);
 void mostrarFactorial(int numeroA,  int resultado);
 
@@ -17,6 +17,7 @@ int main()
     int numeroA = 0;
     int numeroB = 0;
     int resultado;
+
 
     while(seguir=='s')
     {
@@ -50,7 +51,7 @@ int main()
                 mostrarRestar( numeroA, numeroB, resultado);
                 break;
             case 5:
-                mostrarDividir( numeroA, numeroB, resultado);
+                mostrarDividir( numeroA, numeroB);
                 break;
             case 6:
                 mostrarMultiplicar( numeroA, numeroB, resultado);
@@ -61,7 +62,7 @@ int main()
             case 8:
                 mostrarSumar( numeroA, numeroB, resultado);
                 mostrarRestar( numeroA, numeroB, resultado);
-                mostrarDividir( numeroA, numeroB, resultado);
+                mostrarDividir( numeroA, numeroB);
                 mostrarMultiplicar( numeroA, numeroB, resultado);
                 mostrarFactorial( numeroA, resultado);
                 break;
@@ -78,7 +79,7 @@ void mostrarSumar(int numeroA, int numeroB, int resultado)
 {
     if (sumar(numeroA, numeroB, &resultado)==0)
         {
-            printf("La suma es: %d\n", resultado );
+            printf("La suma es: %d\n", resultado);
         }
     else
         {
@@ -98,11 +99,12 @@ void mostrarRestar(int numeroA, int numeroB, int resultado)
         }
 }
 
-void mostrarDividir(int numeroA, int numeroB, int resultado)
+void mostrarDividir(int numeroA, int numeroB)
 {
-    if (dividir(numeroA, numeroB, &resultado)==0)
+    float resultadoDivision;
+    if (dividir(numeroA, numeroB, &resultadoDivision)==0)
         {
-            printf("La division es: %d\n", resultado );
+            printf("La division es: %.2f\n", resultadoDivision);
         }
     else
         {

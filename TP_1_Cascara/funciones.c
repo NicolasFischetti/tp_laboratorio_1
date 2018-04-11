@@ -6,7 +6,7 @@
  * \param x int Primer numero enteros
  * \param y int Segundo numero enteros
  * \param resultado int* Resultado pasado por referencia
- * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
+ * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -2;
  */
 int sumar(int x, int y, int *resultado)
 {
@@ -29,7 +29,7 @@ int sumar(int x, int y, int *resultado)
  * \param x int El primer numero a restar
  * \param y int El segundo numero a restar
  * \param resultado int* Resultado pasado pasado por referencia
- * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
+ * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -2;
  */
 int restar(int x, int y, int *resultado)
 {
@@ -53,18 +53,19 @@ int restar(int x, int y, int *resultado)
  * \param resultado enteros* devuelve el resultado pasado por referencia
  * \return enteros  si esta todo bien 0, si y es = 0 devuelve -1,
  */
-int dividir(int x, int y, int *resultado)
+int dividir(int x, int y, float *resultadoDivision)
 {
     int retorno = -1;
-    long numeroAuxiliar;
-    numeroAuxiliar= x/y;
+    double numeroAuxiliar;
+
     if (y == 0)
     {
         retorno = -1;
     }
     else
     {
-        *resultado= numeroAuxiliar;
+        numeroAuxiliar= (float)x/y;
+        *resultadoDivision= numeroAuxiliar;
         retorno = 0;
     }
     return retorno;
@@ -73,7 +74,7 @@ int dividir(int x, int y, int *resultado)
  * \param x int Primer numero a multiplicar
  * \param y int Segundo numero a multiplicar
  * \param resultado int* devuelve el resultado pasado por referencia
- * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -1;
+ * \return int si esta todo bien 0, si es - overflow -1 o si es + overflow -2;
  */
 int multiplicar(int x, int y, int *resultado)
 {
