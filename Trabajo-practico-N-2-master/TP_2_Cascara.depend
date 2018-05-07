@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1525356923 source:c:\users\-.ficha\desktop\tp_2 (sin terminar\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1525356982 c:\users\-.ficha\desktop\tp_2 (sin terminar\funciones.h
+
+1525354962 source:c:\users\-.ficha\desktop\tp_2 (sin terminar\funciones.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
+1525376754 source:c:\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"utn.h"
+
+1525378505 c:\tp_2\funciones.h
+
+1525376754 source:c:\tp_2\funciones.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1525378799 c:\tp_2\utn.h
+
+1525376754 source:c:\tp_2\utn.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1525364516 source:c:\users\-.ficha\desktop\trabajo-practico-n-2-master\funciones.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1525364516 c:\users\-.ficha\desktop\trabajo-practico-n-2-master\funciones.h
+
+1525364516 c:\users\-.ficha\desktop\trabajo-practico-n-2-master\utn.h
+
+1525364516 source:c:\users\-.ficha\desktop\trabajo-practico-n-2-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"utn.h"
+
+1525364516 source:c:\users\-.ficha\desktop\trabajo-practico-n-2-master\utn.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
