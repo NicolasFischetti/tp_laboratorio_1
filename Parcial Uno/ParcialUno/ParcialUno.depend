@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1525996862 source:d:\parcial uno\parcialuno\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"biblioteca.h"
+
+1525995491 d:\parcial uno\parcialuno\biblioteca.h
+
+1525995238 d:\parcial uno\parcialuno\publicacion.h
+	"Persona.h"
+
+1525991239 source:d:\parcial uno\parcialuno\fantasma.c
+	<stdlib.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524791856 d:\parcial uno\parcialuno\fantasma.h
+
+1525997027 source:d:\parcial uno\parcialuno\main.c
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+	"Persona.h"
+	"Publicacion.h"
+
+1525991525 d:\parcial uno\parcialuno\persona.h
+
+1525996266 source:d:\parcial uno\parcialuno\persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"biblioteca.h"
+	"Persona.h"
+
+1525996707 source:d:\parcial uno\parcialuno\publicacion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"biblioteca.h"
+	"Persona.h"
+	"Publicacion.h"
+
